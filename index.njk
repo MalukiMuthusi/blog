@@ -1,14 +1,27 @@
 ---
-layout: layouts/home.njk
+layout: layouts/about.njk
 eleventyNavigation:
-  key: Home
+  key: About
   order: 1
 ---
 
-<h1>Latest 3 Posts</h1>
+<div class="row">
+  <div class="col-md-8">
+    <h3 class="pb-4 mb-4 font-italic border-bottom">
+      Hi, I'm Maluki.
+    </h3>
+    <p>I'm a software Developer, from Kenya. </p> <br>
+    <p>I work on various technologies including Developing Android applications and web development.</p>
+    <br>
+    <p>I am passionate about mobile solutions. Developing mobile Applications that satisfy customer needs.</p>
+  </div>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+  <aside class="col-md-4">
+    <div class="p-4 mb-3 bg-light rounded">
+      <img src="img/profile-blog.jpg" alt="Image of me." width="200px" height="200px">
+    </div>
+  </aside>
+</div>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+
+

@@ -1,4 +1,4 @@
-const { DateTime } = require("luxon");
+const {DateTime} = require("luxon");
 const fs = require("fs");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -6,7 +6,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
+  eleventyConfig.addLayoutAlias("layouts/home.njk", "layouts/about.njk")
 
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
@@ -26,7 +27,7 @@ module.exports = function(eleventyConfig) {
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
-    if( n < 0 ) {
+    if (n < 0) {
       return array.slice(n);
     }
 
@@ -53,7 +54,7 @@ module.exports = function(eleventyConfig) {
   // Browsersync Overrides
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
-      ready: function(err, browserSync) {
+      ready: function (err, browserSync) {
         const content_404 = fs.readFileSync('_site/404.html');
 
         browserSync.addMiddleware("*", (req, res) => {
@@ -76,7 +77,7 @@ module.exports = function(eleventyConfig) {
     ],
 
     // If your site lives in a different subdirectory, change this.
-    // Leading or trailing slashes are all normalized away, so don’t worry about those.
+    // Leading or trailing slashes are all normalized away, so don’t worry projects those.
 
     // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
     // This is only used for link URLs (it does not affect your file structure)
