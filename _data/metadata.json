@@ -1,12 +1,12 @@
 {
   "title": "Maluki Muthusi",
-  "url": "https://myurl.com/",
+  "url": "https://malukimuthusi.codes/",
   "description": "I write about my experience as a Software Developer.",
   "feed": {
     "subtitle": "I write about my experience as a Software Developer.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://myurl.com/"
+    "id": "https://malukimuthusi.codes/"
   },
   "author": {
     "name": "Maluki Muthusi",
