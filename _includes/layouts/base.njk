@@ -5,19 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ base.apple }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ base.icon }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ base.iconn }}">
+  <link rel="manifest" href="{{ base.manifest }}">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ '/css/blog.css' | url }}">
+  <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
 
   <title>{{ renderData.title or title or metadata.title }}</title>
   <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-  {#  <link rel="stylesheet" href="{{ '/css/index.css' | url }}">#}
-  {#  <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">#}
   <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
 </head>
 
@@ -59,18 +61,16 @@
 </main>
 
 <footer class="container footer mt-auto py-3 bg-light">
-  <div class="container justify-content-center">
-    <p >
-      <a class="mx-2" href="https://github.com/MalukiMuthusi">
-        <button type="button" class="btn btn-secondary">Github</button>
+  <div class="row container justify-content-center">
+      <a class="mx-2" href="https://github.com/MalukiMuthusi" target="_blank">
+        <img src="{{ base.github }}" alt="Twitter Icon." width="72" height="72">
       </a>
-      <a class="mx-2" href="https://twitter.com/MalukiMuthusi">
-        <button type="button" class="btn btn-secondary">Twitter</button>
+      <a class="mx-2" href="https://twitter.com/MalukiMuthusi" target="_blank">
+        <img src="{{ base.twitter }}" alt="Twitter Icon." width="72" height="72">
       </a>
-      <a class="mx-2" href="mailto:malukimuthusi@gmail.com">
-        <button type="button" class="btn btn-primary">Email</button>
+      <a class="mx-2" href="mailto:malukimuthusi@gmail.com" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/email.png" alt="Email Icon"/>
       </a>
-    </p>
   </div>
 </footer>
 

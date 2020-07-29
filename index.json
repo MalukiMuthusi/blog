@@ -1,0 +1,7 @@
+{
+  "eleventyNavigation": {
+    "key": "About",
+    "order": 1
+  },
+  "layout": "layouts/about.njk"
+}

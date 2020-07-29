@@ -36,7 +36,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
+  // copy static images to _site/img
   eleventyConfig.addPassthroughCopy("img");
+
+  // copy css folder to _site/css
   eleventyConfig.addPassthroughCopy("css");
 
   /* Markdown Overrides */
@@ -67,6 +70,7 @@ module.exports = function (eleventyConfig) {
     ui: false,
     ghostMode: false
   });
+
 
   return {
     templateFormats: [

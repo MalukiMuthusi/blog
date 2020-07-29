@@ -1,0 +1,10 @@
+{
+  "eleventyNavigation": {
+    "key": "Projects",
+    "order": 2
+  },
+  "layout": "layouts/about.njk",
+  "heroImage": "/img/awards-2019-2020.jpg",
+  "dMatt": "/img/matt.png",
+  "healthApp": "/img/health-app.png"
+}
