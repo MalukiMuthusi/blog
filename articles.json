@@ -1,8 +1,0 @@
-{
-  "eleventyNavigation": {
-    "key": "Articles",
-    "order": 3
-  },
-  "layout": "layouts/base.njk",
-  "permalink": "/posts/"
-}
