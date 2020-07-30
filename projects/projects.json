@@ -1,0 +1,12 @@
+{
+  "layout": "layouts/base.njk",
+  "title": "Projects",
+  "templateClass": "tmpl-post",
+  "eleventyNavigation": {
+    "key": "Projects",
+    "order": 2
+  },
+  "awarding": "/img/awarding.jpg",
+  "mattApp": "/img/mattApp.png",
+  "healthReportApp": "/img/healthReportApp.png"
+}
